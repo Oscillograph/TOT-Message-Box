@@ -1,0 +1,124 @@
+#chatTable {
+	width:100%;
+	overflow:auto;
+        border:0px;
+}
+#chatTable TR {
+	padding:0px;
+	width:100%;
+        border:0px;
+}
+.tableAdd {
+	text-align:center;
+}
+.light {
+	word-spacing: normal;
+	white-space: normal;
+	font-family: Helvetica, Arial, Times New Roman;
+	font-weight:100;
+	font-size:12px;
+	padding: 2px;
+	color: #0000DB;
+}
+.dark {
+	word-spacing: normal;
+	white-space: normal;
+	font-family: Helvetica, Arial, Times New Roman;
+	font-weight:100;
+	font-size:12px;
+	padding: 2px;
+	color: #0000DB;
+}
+span.nick {
+	text-align: left;
+	word-spacing: normal;
+	white-space: normal;
+	font-family: Helvetica, Arial, Times New Roman;
+	font-weight:800;
+	font-size:12px;
+	color: #242424;
+	padding: 2px;
+}
+body {
+	background-image: url('./im/fon.gif');
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	margin: 0px;
+	padding: 0px;
+}
+table.form {
+	background-color: #000000;
+	width:100%;
+	height:100%;
+	margin:0px;
+}
+input.nick { 
+	height: 20px;
+	width: 20%;
+	background-color: #202020;
+	border-color:white;
+	font-family:Helvetica, Arial, Times New Roman;
+	font-weight: 350;
+	font-size:13px;
+	color: #EEEEEE;
+}
+input.message { 
+	height: 20px;
+	width: 60%;
+	background-color: #202020;
+	border-size:1px;
+        border-color: white;
+	font-family:Helvetica, Arial, Times New Roman;
+	font-weight: 350;
+	font-size:13px;
+	color: #EEEEEE;
+}
+input.submit { 
+	height: 25px;
+	width:10%;
+	border-color: #006600;
+	font-family:Helvetica, Arial, Times New Roman;
+}
+a {
+	color: #FFDDFF; 
+	font-family:Helvetica, Arial, Times New Roman;
+	font-weight:300;
+	font-size: 15px;
+}
+span.date {
+	text-align: left;
+	word-spacing: normal;
+	white-space: normal;
+	font-family: Verdana, Arial, Times New Roman;
+	font-weight:800;
+	font-size:11px;
+	color: #242424;
+	padding: 2px;
+}
+.archive_link a:hover {
+	color: #ffffff; 
+	font-family: Helvetica, Arial, Times New Roman;
+	font-weight:300;
+	font-size: 15px;
+}
+.archive_link {
+	background-color: #44809d;
+}
+#msglink:link {
+	color: #00ddFF; 
+	font-family:Helvetica, Arial, Times New Roman;
+	font-weight:300;
+	font-size:12px;
+}
+#msglink:hover {
+	color: #FFFFFF; 
+	font-family:Helvetica, Arial, Times New Roman;
+	font-weight:300;
+	font-size:12px;
+}
+#msglink:visited {
+	color: #00ddFF; 
+	font-family:Helvetica, Arial, Times New Roman;
+	font-weight:300;
+	font-size:12px;
+}

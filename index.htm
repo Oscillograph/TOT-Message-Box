@@ -1,0 +1,281 @@
+<html>
+<head>
+<meta http-equiv='content-type' content='text/html; charset=windows-1251'>
+<meta http-equiv='keywords' content='ToMB, чат, мини-чат, ТехнОкраТ, скрипт, PHP, бесплатное'>
+<meta http-equiv='author' content='ТехнОкраТ'>
+<title> Бесплатный скрипт интегрируемых мини-чатов ToMB </title>
+<style type='text/css'>
+body {
+	margin:0px;
+	background-color:#efefef;
+}
+body div #main_menu {
+	background-color:#333333;
+}
+#main_menu tr td {
+	text-align:center;
+}
+#menu td {
+	background-color:#efefef;
+	border-width:1px;
+	border-color:#333333;
+	border-style:solid;
+	width:20%;
+	background-image:url(http://totservis.yard.ru/im/tab_fon1.gif);
+}
+#menu td a:link{
+	color:#efefef;
+	text-decoration:none;
+	font-family:Verdana,Arial,Helvetica,Times New Roman;
+	font-size:15px;
+	font-weight:bold;
+}
+#menu td a:visited{
+	color:#efefef;
+	text-decoration:none;
+	font-family:Verdana,Arial,Helvetica,Times New Roman;
+	font-size:15px;
+	font-weight:bold;
+}
+#menu td a:hover{
+	color:#efefef;
+	text-decoration:none;
+	font-family:Verdana,Arial,Helvetica,Times New Roman;
+	font-size:15px;
+	font-weight:bold;
+}
+#main_table {
+	border-width:1px;
+	border-color:#333333;
+	border-style:solid;
+}
+#left_menu {
+	
+}
+#header_c td {
+	background-color:#333333;
+	color:#efefef;
+	font-size:17px;
+	text-align:center;
+	padding-bottom:0px;
+}
+#header td {
+	background-color:#333333;
+	color:#efefef;
+	font-size:18px;
+	width:100%;
+	text-align:center;
+	padding-bottom:2px;
+}
+#item td a:hover {
+	background-color:#e8e8e8;
+	font-size:15px;
+	color:#000000;
+	font-family: Verdana, Arial, Helvetica, Times New Roman;
+	text-decoration:none;
+}
+#item td a:link {
+	background-color:#e8e8e8;
+	font-size:15px;
+	color:#000000;
+	font-family: Verdana, Arial, Helvetica, Times New Roman;
+	text-decoration:none;
+}
+#item td a:visited {
+	background-color:#e8e8e8;
+	font-size:15px;
+	color:#000000;
+	font-family: Verdana, Arial, Helvetica, Times New Roman;
+	text-decoration:none;
+}
+#item td {
+	background-color:#e8e8e8;
+	font-size:15px;
+	width:100%;
+	text-align:center;
+	border-right:1px #333333 solid;
+}
+#content {
+	font-family: Verdana, Arial, Helvetica, Times New Roman;
+	font-size:11px;
+	background-color:#eaeaea;
+	border-left: 1px #333333 solid;
+}
+#breaker td {
+	background-color:#efefef;
+	color:#efefef;
+	font-size:18px;
+	width:100%;
+	text-align:center;
+	padding-bottom:2px;
+}
+#banner td {
+	background-color:#e8e8e8;
+	font-size:15px;
+	width:100%;
+	text-align:center;
+	border-left:1px #333333 solid;
+}
+#item_c td {
+	background-color:#e8e8e8;
+	font-size:15px;
+	width:100%;
+	text-align:left;
+	border-right:0px #333333 solid;
+	padding:4px;
+}
+</style>
+</head>
+<body>
+<script type='text/javascript'>
+function itemOver(e){
+	e.parentNode.style.borderLeft="1px #333333 solid";
+}
+function itemOut(e){
+	e.parentNode.style.borderLeft="0px";
+}
+function menuOver(e){
+	e.parentNode.style.backgroundImage="url(http://totservis.yard.ru/im/tab_fon4.gif)";
+}
+function menuOut(e){
+	e.parentNode.style.backgroundImage="url(http://totservis.yard.ru/im/tab_fon1.gif)";
+}
+function getCls(e){
+	if(null != e.getAttribute('class')){return e.getAttribute('class');}
+	else {return e.className;}
+}
+</script>
+
+<div align=center>
+<table width=640 id=main_menu>
+	<tr height=100 id=logo>
+
+		<td colspan=5> <img src='http://totservis.yard.ru/im/tomblogo.jpg' border=0> </td>
+	</tr>
+	<tr height=20 id=menu>
+		<td><a href='http://totservis.yard.ru/?mod=main' target=_self onMouseOver='menuOver(this)'onMouseOut='menuOut(this)'>Главная</a></td>
+		<td><a href='http://totservis.yard.ru/?mod=dwnld' terget=_self onMouseOver='menuOver(this)'onMouseOut='menuOut(this)'>Скачать</a></td>
+		<td><a href='http://totservis.yard.ru/?mod=chat' target=_self onMouseOver='menuOver(this)'onMouseOut='menuOut(this)'>Чат</a></td>
+
+		<td><a href='http://totservis.yard.ru/?mod=other' target=_self onMouseOver='menuOver(this)'onMouseOut='menuOut(this)'>Разное</a></td>
+		<td><a href='http://totservis.fastbb.ru' target=_self onMouseOver='menuOver(this)'onMouseOut='menuOut(this)'>Форум</a></td>
+	</tr>
+</table>
+<p>
+<table width=640 id=main_table>
+	<tr valign=top>
+<!-- /header.tpl --><!-- left.tpl -->
+		<td width=25% id=left_menu>
+		<table width=100%>
+
+			<tr height=20 id=header>
+				<td> :: Категории :: </td>
+			</tr>
+			<tr height=20 id=item>
+				<td><a href='http://totservis.yard.ru/?mod=main&cat=about' onMouseOver='itemOver(this)' onMouseOut='itemOut(this)'>о ToMB</a></td>
+			</tr>
+			<tr height=20 id=item>
+
+				<td><a href='http://totservis.yard.ru/?mod=main&cat=manuals' onMouseOver='itemOver(this)' onMouseOut='itemOut(this)'>F.A.Q.</a></td>
+			</tr>
+			<tr height=20 id=item>
+				<td><a href='http://totservis.yard.ru/?mod=main&cat=news' onMouseOver='itemOver(this)' onMouseOut='itemOut(this)'>Новости</a></td>
+			</tr>
+			<tr height=20 id=item>
+				<td><a href='http://totservis.yard.ru/?mod=main&cat=contacts' onMouseOver='itemOver(this)' onMouseOut='itemOut(this)'>Контакты</a></td>
+
+			</tr>
+			<tr height=20 id=breaker>
+				<td> &nbsp; </td>
+			</tr>
+			<tr height=20 id=header>
+				<td> :: Баннеры :: </td>
+			</tr>
+
+			<tr height=20 id=banner>
+				<td><a href='http://totservis.yard.ru/' target=_blank><img src='http://totservis.yard.ru/im/tomb_banner.gif' border=0></a></td>
+			</tr>
+			<tr height=20 id=banner>
+				<td> </td>
+			</tr>
+			<tr height=20 id=banner>
+				<td> </td>
+
+			</tr>
+			<tr height=20 id=banner>
+				<td> </td>
+			</tr>
+		</table>
+		</td>
+<!-- /left.tpl --><!-- content.tpl -->
+		<td width=75% id=content valign=top>
+
+
+<div align=center>
+<table width=90% bgcolor=#efefef><tr valign=top><td style='font-family:Helvetica,Verdana,Arial,Times New Roman; font-size:16px;'>
+Для добавления Вашего чата в HTML-код любого Вашего проекта добавьте следующие строки :<br>
+ <br>
+<span style="font-family:Helvetica; font-size:12px;">
+     &lt;iframe src="http://<span solor=red>Ваш_сайт/Папка_чата</span>/chat.php" name=chat scrolling=no width="Ширина_чата" height="Высота_чата"&gt;&lt;br&gt;&lt;/iframe&gt;<br>
+     &lt;iframe src="http://<span color=red>Ваш_сайт/Папка_чата</span>/post_form.php" name=post_form scrolling=no width="Ширина_чата" height="Высота_чата"&gt;&lt;/iframe&gt;<br>
+</span>
+
+<p>Значения ширины и высоты фреймов чата указывать в пикселях.
+   Разумеется, эти фреймы можно вставлять в таблицы, разделять их друг от друга, можно вставлять только один фрейм или ещё как-нибудь.
+   Важно, чтобы Вы помнили о назначении файлов чата:<br> <br>
+
+     chat.php                   --- Показывает отображаемые сообщения чата<br>
+     post_form.php              --- Показывает форму отправления сообщения<br>
+     archive.php                --- Показывает архив сообщений чата<br>
+</p>
+
+<div align=center>
+<iframe src='./chat.php' name=chat width=400 height=300 scrolling=no></iframe>
+<br>
+<iframe src='./post_form.php' name=post_form width=400 height=60 scrolling=no></iframe>
+</div>
+
+<br>
+<p>
+<b>ПОЛЕЗНЫЕ JS-скрипты:</b><br> <br>
+<u>Открытие чата в новом окне:</u><br> <br>
+Прямо перед тегом &lt;body&gt; в коде страницы пропишите:<br> 
+<p style="font-family:Helvetica; font-size:12px;">
+&lt;script type="text/javascript"&gt;<br>
+function open_chat(){<br>
+chatbox = window.open('','','width=400, height=360, scrolling=0, resizable=0,top=100,left=100');<br>
+chatbox.document.write('&lt;body style="margin:0px"&gt;');
+chatbox.document.write('&lt;iframe src="http://<span style="color:#FF0000">Ваш_сайт/Папка_чата</span>/chat.php" name=chat scrolling=no width="Ширина_чата" height="Высота_чата"&gt; &lt;br&gt; &lt;/iframe&gt; &lt;br&gt; &lt;iframe src="http://<span style="color:#FF0000">Ваш_сайт/Папка_чата</span>/post_form.php" name=post_form scrolling=no width="Ширина_чата" height="Высота_чата"&gt; &lt;/iframe&gt;');<br>
+chatbox.document.write('&lt;'+'/body&gt;');
+}<br>
+&lt;/script&gt;
+</p>
+И в нужном Вам месте вставьте ссылку на чат:<br>
+<p style="font-family:Helvetica; font-size:12px;">
+&lt;a href="javascript:open_chat();"&gt;Чат&lt;/a&gt;
+</p>
+
+Пример:
+<script type="text/javascript">
+function open_chat(){
+chatbox = window.open('','','width=400,height=360,scrolling=0,resizable=0,top=100,left=100,');
+chatbox.document.write('<html><head><'+'/head><body style="margin:0px">');
+chatbox.document.write('<iframe src="./chat.php" name=chat scrolling=no width="400" height="300" name=chat><br></iframe><br><iframe src="./post_form.php" name=post_form scrolling=no width="400" height="60"></iframe>');
+chatbox.document.write('<'+'/body><'+'/html>');
+}
+</script> 
+<a href="javascript:open_chat();">Чат</a> 
+</p>
+
+</td></tr></table></div>
+
+		</td>
+<!-- /content.tpl --><!-- footer.tpl -->
+	</tr>
+</table>
+</p>
+</div>
+</body>
+
+</html>
+<!-- /footer.tpl -->
