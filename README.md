@@ -10,7 +10,7 @@
 	7. Краткое описание РНР-функций чата<br />
 	8. F.A.Q. : часто задаваемые вопросы<br />
 
-![Version 2.20-3](https://postimg.cc/SjTcrVmt)
+![Version 2.20-3](https://i.postimg.cc/yYBn7rtB/2203-demo.gif)
 
 ### ИНСТРУКЦИЯ ПО УСТАНОВКЕ ЧАТА :
 ВНИМАНИЕ !
